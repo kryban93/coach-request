@@ -5,3 +5,17 @@ export interface formTypes {
 	rate: null | number;
 	areas: string[];
 }
+
+export interface CoachFormTypes {
+	firstName: InputElementTypes<string>;
+	lastName: InputElementTypes<string>;
+	description: InputElementTypes<string>;
+	rate: InputElementTypes<number | null>;
+	areas: InputElementTypes<string[]>;
+	formIsValid: boolean;
+}
+
+export interface InputElementTypes<T> {
+	value: T;
+	isValid: boolean;
+}
