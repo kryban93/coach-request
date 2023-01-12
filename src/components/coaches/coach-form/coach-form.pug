@@ -1,0 +1,25 @@
+form(@submit.prevent='submitForm')
+    .form-control
+        label(for='firstname') First Name
+        input(type='text' id='firstname' v-model.trim='firstName')
+    .form-control
+        label(for='lastname') Last Name
+        input(type='text' id='lastname' v-model.trim='lastName')
+    .form-control
+        label(for='description') Description
+        textarea(id='description' rows='5' v-model.trim='description')
+    .form-control
+        label(for='rate') Hourly Rate
+        input(type='number' id='rate' v-model.number='rate')
+    .form-control
+        h3 Areas of Expertise
+        div
+            input(type='checkbox' id='frontend' value='frontend' v-model='areas')
+            label(for='frontend') Frontend Development
+        div
+            input(type='checkbox' id='backend' value='backend' v-model='areas')
+            label(for='backend') Backend Development
+        div
+            input(type='checkbox' id='career' value='career' v-model='areas')
+            label(for='career') Career Adrisory
+    base-button Register
