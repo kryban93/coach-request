@@ -7,13 +7,16 @@ import CoachFilter from "@/components/coaches/coach-filter/coach-filter.vue";
 import type { Filters } from "@/components/coaches/coach-filter/types";
 export default {
 	computed: {
+		isCoach(): boolean {
+			return this.$store.getters["coaches/isCoach"];
+		},
 		filteredCoaches(): Coach[] {
 			const coaches = this.$store.getters["coaches/coaches"];
 			return coaches.filter((coach: Coach) => {
-				if (this.activeFilters.frontend && coach.areas.includes("fe")) {
+				if (this.activeFilters.frontend && coach.areas.includes("frontend")) {
 					return true;
 				}
-				if (this.activeFilters.backend && coach.areas.includes("be")) {
+				if (this.activeFilters.backend && coach.areas.includes("backend")) {
 					return true;
 				}
 				if (this.activeFilters.career && coach.areas.includes("career")) {
@@ -40,9 +43,6 @@ export default {
 		setFilters(updatedFilters: Filters) {
 			this.activeFilters = updatedFilters;
 		},
-	},
-	updated() {
-		console.log(this.$store.getters["coaches/coaches"]);
 	},
 };
 </script>

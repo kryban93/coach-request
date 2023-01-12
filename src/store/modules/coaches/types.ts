@@ -7,6 +7,6 @@ export interface Coach {
 	hourlyRate: number;
 }
 
-export interface Store {
+export interface CoachStoreTypes {
 	coaches: Coach[];
 }

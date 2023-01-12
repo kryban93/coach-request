@@ -10,11 +10,11 @@ export default {
 	data() {
 		return {};
 	},
+
 	methods: {
 		saveData(data: formTypes) {
 			this.$store.dispatch("coaches/registerCoach", data);
 			this.$router.replace("/coaches"); // can't go back to form if You use "replace" instead of "push"
-			console.log(this.$store.getters["coaches/coaches"]);
 		},
 	},
 };

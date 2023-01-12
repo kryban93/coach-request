@@ -4,7 +4,8 @@ section
     base-card
         .controls
             base-button(mode='outline') Refresh
-            base-button(to='/register' link) Register
+            base-button(to='/register' link ) Register
+            // v-if='!isCoach' to base button let user only once add as coach
         ul(v-if='hasCoaches')
             coach-item(
                 v-for='coach in filteredCoaches'
