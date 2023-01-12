@@ -1,0 +1,8 @@
+li
+    h3 {{ fullName }}
+    h4  ${{ rate }}/hour
+    div
+        span(v-for='area in areas' :key='area') {{ area }}
+    .actions
+        router-link(:to='coachContactLink') Contact
+        router-link(:to='coachDetailsLink') View Details

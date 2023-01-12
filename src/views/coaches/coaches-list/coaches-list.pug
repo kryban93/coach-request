@@ -4,5 +4,11 @@ section
         button Refresh
         router-link(to='/register') Register
     ul(v-if='hasCoaches') List of Coachees
-        li(v-for='coach in filteredCoaches' :key='coach.id') {{coach.firstName}}
+        coach-item(
+            v-for='coach in filteredCoaches'
+            :key='coach.id'
+            :id='coach.id'
+            :firstName='coach.firstName'
+            :lastName='coach.lastName'
+            :areas='coach.areas')
     h3(v-else) No coaches found
