@@ -1,0 +1,11 @@
+base-card
+    h2 Find Your Coach
+    span.filter-option
+        input(type='checkbox' id='frontend' checked @change='setFilter')
+        label(for='frontend') FE
+    span.filter-option
+        input(type='checkbox' id='backend' checked @change='setFilter')
+        label(for='backend') BE
+    span.filter-option
+        input(type='checkbox' id='career' checked @change='setFilter')
+        label(for='career') Career
