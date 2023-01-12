@@ -1,0 +1,4 @@
+button(v-if='!link' :class='mode')
+    slot
+router-link(v-else :to='to' :class='mode')
+    slot

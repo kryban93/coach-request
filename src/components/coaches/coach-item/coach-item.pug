@@ -2,7 +2,7 @@ li
     h3 {{ fullName }}
     h4  ${{ rate }}/hour
     div
-        span(v-for='area in areas' :key='area') {{ area }}
+        base-badge(v-for='area in areas' :key='area' :type='area' :title='area')
     .actions
-        router-link(:to='coachContactLink') Contact
-        router-link(:to='coachDetailsLink') View Details
+        base-button(link mode='outline' :to='coachContactLink') Contact
+        base-button(link :to='coachDetailsLink') View Details
