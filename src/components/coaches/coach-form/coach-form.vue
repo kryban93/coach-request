@@ -34,6 +34,7 @@ export default {
 	methods: {
 		clearValidation(input: any) {
 			// this[input].isValid = true;
+			// TODO: check for solutions
 		},
 		validateForm() {
 			this.formIsValid = true;
