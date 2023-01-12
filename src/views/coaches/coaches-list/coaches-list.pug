@@ -3,4 +3,6 @@ section
     .controls
         button Refresh
         router-link(to='/register') Register
-    ul List of Coachees
+    ul(v-if='hasCoaches') List of Coachees
+        li(v-for='coach in filteredCoaches' :key='coach.id') {{coach.firstName}}
+    h3(v-else) No coaches found
