@@ -1,3 +1,4 @@
+import type { Coach } from "./types";
 import mutations from "./mutations";
 import getters from "./getters";
 import actions from "./actions";
@@ -21,9 +22,9 @@ export default {
 					lastName: "Jones",
 					areas: ["fe", "carrer"],
 					description: "Hello Lorem Ipsum dolor sit",
-					hourlyRate: 30,
+					hourlyRate: 20,
 				},
-			],
+			] as Coach[],
 		};
 	},
 	mutations,
