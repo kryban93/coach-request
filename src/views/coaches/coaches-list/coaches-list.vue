@@ -41,5 +41,8 @@ export default {
 			this.activeFilters = updatedFilters;
 		},
 	},
+	updated() {
+		console.log(this.$store.getters["coaches/coaches"]);
+	},
 };
 </script>
