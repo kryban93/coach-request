@@ -3,7 +3,7 @@
 
 <script lang="ts">
 export default {
-	props: ["id", "firstName", "lastName", "rate", "areas"],
+	props: ["id", "firstName", "lastName", "rate", "areas", "hourlyRate"],
 	computed: {
 		fullName(): string {
 			return `${this.firstName} ${this.lastName}`;
