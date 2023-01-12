@@ -1,1 +1,10 @@
-p contact coach
+form(@submit.prevent='submitForm')
+    .form-control
+        label(for='email') Your e-mail
+        input(type='email' id='email' v-model.trim='email.value')
+    .form-control
+        label(for='message') Message
+        textarea(rows='5' id='message' v-model.trim='message.value')
+    p.errors(v-if='!formIsValid') Enter valid data
+    .actions
+        base-button Send Message

@@ -9,7 +9,7 @@ export default {
 			return `${this.firstName} ${this.lastName}`;
 		},
 		coachContactLink(): string {
-			return this.$route.path + "/" + this.id + "/contact";
+			return "contact/" + this.id;
 		},
 		coachDetailsLink(): string {
 			return this.$route.path + "/" + this.id;
