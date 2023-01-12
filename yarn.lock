@@ -290,12 +290,56 @@
     "@volar/source-map" "1.0.24"
     "muggle-string" "^0.1.0"
 
+"@volar/language-service@1.0.24":
+  "integrity" "sha512-Y37lzNRVM2xDY1kFXn88n9nkXUD1H0ZffXXLbsFbkUhMM1pKBgcJGEuRXoATXu62R0NmrcGXrktjTPQ4VjKQuA=="
+  "resolved" "https://registry.npmjs.org/@volar/language-service/-/language-service-1.0.24.tgz"
+  "version" "1.0.24"
+  dependencies:
+    "@volar/language-core" "1.0.24"
+    "@volar/shared" "1.0.24"
+    "@volar/source-map" "1.0.24"
+    "@volar/typescript-faster" "1.0.24"
+    "vscode-html-languageservice" "^5.0.3"
+    "vscode-json-languageservice" "^5.1.3"
+    "vscode-languageserver-protocol" "^3.17.2"
+    "vscode-languageserver-textdocument" "^1.0.8"
+    "vscode-uri" "^3.0.7"
+
+"@volar/pug-language-service@1.0.24":
+  "integrity" "sha512-HC8+rdvYnEzm4IrmRrnF64NbeVrPh1aSFqYo92rLVyY4l7OCINxuMiifRu1WuaNlwpPXhK1hw3qLPq089ppMiA=="
+  "resolved" "https://registry.npmjs.org/@volar/pug-language-service/-/pug-language-service-1.0.24.tgz"
+  "version" "1.0.24"
+  dependencies:
+    "@volar/language-service" "1.0.24"
+    "@volar/shared" "1.0.24"
+    "@volar/source-map" "1.0.24"
+    "muggle-string" "^0.1.0"
+    "pug-lexer" "^5.0.1"
+    "pug-parser" "^6.0.0"
+    "vscode-languageserver-textdocument" "^1.0.8"
+    "vscode-languageserver-types" "^3.17.2"
+
+"@volar/shared@1.0.24":
+  "integrity" "sha512-30mqmNsw49xlGhziL59z6kP6/TlBatkeOzMImUSWmn1QtqV7r2onDGgNNdCqSa1esTo4UtGup6yqqM2oUwrMSQ=="
+  "resolved" "https://registry.npmjs.org/@volar/shared/-/shared-1.0.24.tgz"
+  "version" "1.0.24"
+  dependencies:
+    "typesafe-path" "^0.2.2"
+    "vscode-uri" "^3.0.7"
+
 "@volar/source-map@1.0.24":
   "integrity" "sha512-Qsv/tkplx18pgBr8lKAbM1vcDqgkGKQzbChg6NW+v0CZc3G7FLmK+WrqEPzKlN7Cwdc6XVL559Nod8WKAfKr4A=="
   "resolved" "https://registry.npmjs.org/@volar/source-map/-/source-map-1.0.24.tgz"
   "version" "1.0.24"
   dependencies:
     "muggle-string" "^0.1.0"
+
+"@volar/typescript-faster@1.0.24":
+  "integrity" "sha512-8JtPkR3p2EVpBrD5puuP4y4CA7LVIkMV/+O2a/biD5zHyfqwN+s5j1/perp0D/5RgyxLJWhWIIYo1HR5ac5jlA=="
+  "resolved" "https://registry.npmjs.org/@volar/typescript-faster/-/typescript-faster-1.0.24.tgz"
+  "version" "1.0.24"
+  dependencies:
+    "semver" "^7.3.8"
 
 "@volar/typescript@1.0.24":
   "integrity" "sha512-f8hCSk+PfKR1/RQHxZ79V1NpDImHoivqoizK+mstphm25tn/YJ/JnKNjZHB+o21fuW0yKlI26NV3jkVb2Cc/7A=="
@@ -318,6 +362,14 @@
     "minimatch" "^5.1.1"
     "vue-template-compiler" "^2.7.14"
 
+"@volar/vue-language-plugin-pug@^1.0.24":
+  "integrity" "sha512-22BZ9bUe4DuWNxJAv7FITZyN5fyfejGnGmCsaai3zoObD6kflW2tf8PEVNGSXjbE5rGdaAyXR0gmHr/iIm5T5A=="
+  "resolved" "https://registry.npmjs.org/@volar/vue-language-plugin-pug/-/vue-language-plugin-pug-1.0.24.tgz"
+  "version" "1.0.24"
+  dependencies:
+    "@volar/pug-language-service" "1.0.24"
+    "@volar/source-map" "1.0.24"
+
 "@volar/vue-typescript@1.0.24":
   "integrity" "sha512-9a25oHDvGaNC0okRS47uqJI6FxY4hUQZUsxeOUFHcqVxZEv8s17LPuP/pMMXyz7jPygrZubB/qXqHY5jEu/akA=="
   "resolved" "https://registry.npmjs.org/@volar/vue-typescript/-/vue-typescript-1.0.24.tgz"
@@ -325,6 +377,11 @@
   dependencies:
     "@volar/typescript" "1.0.24"
     "@volar/vue-language-core" "1.0.24"
+
+"@vscode/l10n@^0.0.10":
+  "integrity" "sha512-E1OCmDcDWa0Ya7vtSjp/XfHFGqYJfh+YPC1RkATU71fTac+j1JjCcB3qwSzmlKAighx2WxhLlfhS0RwAN++PFQ=="
+  "resolved" "https://registry.npmjs.org/@vscode/l10n/-/l10n-0.0.10.tgz"
+  "version" "0.0.10"
 
 "@vue/compiler-core@3.2.45":
   "integrity" "sha512-rcMj7H+PYe5wBV3iYeUgbCglC+pbpN8hBLTJvRiK2eKQiWqu+fG9F+8sW99JdL4LQi7Re178UOxn09puSXvn4A=="
@@ -1998,6 +2055,11 @@
   dependencies:
     "minimist" "^1.2.0"
 
+"jsonc-parser@^3.2.0":
+  "integrity" "sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w=="
+  "resolved" "https://registry.npmjs.org/jsonc-parser/-/jsonc-parser-3.2.0.tgz"
+  "version" "3.2.0"
+
 "jsonfile@^6.0.1":
   "integrity" "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ=="
   "resolved" "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz"
@@ -2746,7 +2808,7 @@
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
   "version" "5.7.1"
 
-"semver@^7.3.2", "semver@^7.3.5", "semver@^7.3.6", "semver@^7.3.7":
+"semver@^7.3.2", "semver@^7.3.5", "semver@^7.3.6", "semver@^7.3.7", "semver@^7.3.8":
   "integrity" "sha512-NB1ctGL5rlHrPJtFDVIVzTyQylMLu9N9VICA6HSFJo8MCGVTMW6gfpicwKmmK/dAjTOrqu5l63JJOpDSrAis3A=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.8.tgz"
   "version" "7.3.8"
@@ -3094,6 +3156,11 @@
     "for-each" "^0.3.3"
     "is-typed-array" "^1.1.9"
 
+"typesafe-path@^0.2.2":
+  "integrity" "sha512-OJabfkAg1WLZSqJAJ0Z6Sdt3utnbzr/jh+NAHoyWHJe8CMSy79Gm085094M9nvTPy22KzTVn5Zq5mbapCI/hPA=="
+  "resolved" "https://registry.npmjs.org/typesafe-path/-/typesafe-path-0.2.2.tgz"
+  "version" "0.2.2"
+
 "typescript@*", "typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@~4.7.4":
   "integrity" "sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz"
@@ -3169,6 +3236,55 @@
   "integrity" "sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w=="
   "resolved" "https://registry.npmjs.org/void-elements/-/void-elements-3.1.0.tgz"
   "version" "3.1.0"
+
+"vscode-html-languageservice@^5.0.3":
+  "integrity" "sha512-6rfrtcHhXDMXmC5pR2WXrx02HiNCzQDynOBMn+53zLxr2hvZrDzoc0QgC0FaFGfcglf7GeOsfhkWvJBFC/a70g=="
+  "resolved" "https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-5.0.3.tgz"
+  "version" "5.0.3"
+  dependencies:
+    "@vscode/l10n" "^0.0.10"
+    "vscode-languageserver-textdocument" "^1.0.7"
+    "vscode-languageserver-types" "^3.17.2"
+    "vscode-uri" "^3.0.6"
+
+"vscode-json-languageservice@^5.1.3":
+  "integrity" "sha512-p0O1Ql5+zyWFIBU4cSxnDcuq9OnbE0MmvNKDYYvz4EPsZ9EHBT3I6KJb5Gk3snkj+jQTFILEZ06cfY7WZxxqPw=="
+  "resolved" "https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-5.1.3.tgz"
+  "version" "5.1.3"
+  dependencies:
+    "@vscode/l10n" "^0.0.10"
+    "jsonc-parser" "^3.2.0"
+    "vscode-languageserver-textdocument" "^1.0.7"
+    "vscode-languageserver-types" "^3.17.2"
+    "vscode-uri" "^3.0.6"
+
+"vscode-jsonrpc@8.0.2":
+  "integrity" "sha512-RY7HwI/ydoC1Wwg4gJ3y6LpU9FJRZAUnTYMXthqhFXXu77ErDd/xkREpGuk4MyYkk4a+XDWAMqe0S3KkelYQEQ=="
+  "resolved" "https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.0.2.tgz"
+  "version" "8.0.2"
+
+"vscode-languageserver-protocol@^3.17.2":
+  "integrity" "sha512-8kYisQ3z/SQ2kyjlNeQxbkkTNmVFoQCqkmGrzLH6A9ecPlgTbp3wDTnUNqaUxYr4vlAcloxx8zwy7G5WdguYNg=="
+  "resolved" "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.2.tgz"
+  "version" "3.17.2"
+  dependencies:
+    "vscode-jsonrpc" "8.0.2"
+    "vscode-languageserver-types" "3.17.2"
+
+"vscode-languageserver-textdocument@^1.0.7", "vscode-languageserver-textdocument@^1.0.8":
+  "integrity" "sha512-1bonkGqQs5/fxGT5UchTgjGVnfysL0O8v1AYMBjqTbWQTFn721zaPGDYFkOKtfDgFiSgXM3KwaG3FMGfW4Ed9Q=="
+  "resolved" "https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.8.tgz"
+  "version" "1.0.8"
+
+"vscode-languageserver-types@^3.17.2", "vscode-languageserver-types@3.17.2":
+  "integrity" "sha512-zHhCWatviizPIq9B7Vh9uvrH6x3sK8itC84HkamnBWoDFJtzBf7SWlpLCZUit72b3os45h6RWQNC9xHRDF8dRA=="
+  "resolved" "https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.2.tgz"
+  "version" "3.17.2"
+
+"vscode-uri@^3.0.6", "vscode-uri@^3.0.7":
+  "integrity" "sha512-eOpPHogvorZRobNqJGhapa0JdwaxpjVvyBp0QIUMRMSf8ZAlqOdEquKuRmw9Qwu0qXtJIWqFtMkmvJjUZmMjVA=="
+  "resolved" "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.0.7.tgz"
+  "version" "3.0.7"
 
 "vue-eslint-parser@^9.0.0", "vue-eslint-parser@^9.0.1":
   "integrity" "sha512-NGn/iQy8/Wb7RrRa4aRkokyCZfOUWk19OP5HP6JEozQFX5AoS/t+Z0ZN7FY4LlmWc4FNI922V7cvX28zctN8dQ=="
