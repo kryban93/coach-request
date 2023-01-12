@@ -8,19 +8,19 @@ import RequestReceived from "../views/requests/request-received/request-received
 import NotFound from "../views/not-found/not-found.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    { path: "/", redirect: "/coaches" },
-    { path: "/coaches", component: CoachList },
-    {
-      path: "/coaches/:id",
-      component: CoachDetail,
-      children: [{ path: "/contact", component: ContactCoach }],
-    },
-    { path: "/register", component: CoachRegistration },
-    { path: "/requests", component: RequestReceived },
-    { path: "/:notFound(.*)", component: NotFound },
-  ],
+	history: createWebHistory(),
+	routes: [
+		{ path: "/", redirect: "/coaches" },
+		{ path: "/coaches", component: CoachList },
+		{
+			path: "/coaches/:id",
+			component: CoachDetail,
+			children: [{ path: "/contact", component: ContactCoach }],
+		},
+		{ path: "/register", component: CoachRegistration },
+		{ path: "/requests", component: RequestReceived },
+		{ path: "/:notFound(.*)", component: NotFound },
+	],
 });
 
 export default router;

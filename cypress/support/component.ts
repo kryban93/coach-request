@@ -30,11 +30,11 @@ import { mount } from "cypress/vue";
 // with a <reference path="./component" /> at the top of your spec.
 /* eslint-disable @typescript-eslint/no-namespace */
 declare global {
-  namespace Cypress {
-    interface Chainable {
-      mount: typeof mount;
-    }
-  }
+	namespace Cypress {
+		interface Chainable {
+			mount: typeof mount;
+		}
+	}
 }
 
 Cypress.Commands.add("mount", mount);

@@ -1,6 +1,6 @@
 <template>
-  <base-header></base-header>
-  <router-view></router-view>
+	<base-header></base-header>
+	<router-view></router-view>
 </template>
 
 <style src="./styles/app.css"></style>
@@ -9,6 +9,6 @@
 import BaseHeader from "./components/base-header/base-header.vue";
 
 export default {
-  components: { BaseHeader },
+	components: { BaseHeader },
 };
 </script>
