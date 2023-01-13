@@ -5,7 +5,7 @@ section
 section
     base-card
         .controls
-            base-button(mode='outline' @click='loadCoaches') Refresh
+            base-button(mode='outline' @click='loadCoaches(true)') Refresh
             base-button(to='/register' link ) Register
             // v-if='!isCoach' to base button let user only once add as coach
         div(v-if='isLoading')

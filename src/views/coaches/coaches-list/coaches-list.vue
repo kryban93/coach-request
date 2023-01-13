@@ -45,10 +45,12 @@ export default {
 		setFilters(updatedFilters: Filters) {
 			this.activeFilters = updatedFilters;
 		},
-		async loadCoaches() {
+		async loadCoaches(refresh = false) {
 			this.isLoading = true;
 			try {
-				await this.$store.dispatch("coaches/loadCoaches");
+				await this.$store.dispatch("coaches/loadCoaches", {
+					forceRefresh: refresh,
+				});
 			} catch (error: any) {
 				// TODO: update type any
 				this.error = error.message || "Something went wrong";
