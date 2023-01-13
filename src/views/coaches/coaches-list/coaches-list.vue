@@ -26,7 +26,7 @@ export default {
 			});
 		},
 		hasCoaches(): boolean {
-			return this.$store.getters["coaches/hasCoaches"];
+			return !this.isLoading && this.$store.getters["coaches/hasCoaches"];
 		},
 	},
 	data() {
@@ -36,6 +36,7 @@ export default {
 				backend: true,
 				career: true,
 			},
+			isLoading: false,
 		};
 	},
 	components: { CoachItem, CoachFilter },
@@ -43,8 +44,10 @@ export default {
 		setFilters(updatedFilters: Filters) {
 			this.activeFilters = updatedFilters;
 		},
-		loadCoaches() {
-			this.$store.dispatch("coaches/loadCoaches");
+		async loadCoaches() {
+			this.isLoading = true;
+			await this.$store.dispatch("coaches/loadCoaches");
+			this.isLoading = false;
 		},
 	},
 	created() {

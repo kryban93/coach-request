@@ -6,7 +6,9 @@ section
             base-button(mode='outline' @click='loadCoaches') Refresh
             base-button(to='/register' link ) Register
             // v-if='!isCoach' to base button let user only once add as coach
-        ul(v-if='hasCoaches')
+        div(v-if='isLoading')
+            base-spinner
+        ul(v-else-if='hasCoaches')
             coach-item(
                 v-for='coach in filteredCoaches'
                 :key='coach.id'
