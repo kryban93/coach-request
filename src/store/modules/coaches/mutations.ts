@@ -3,4 +3,7 @@ export default {
 	registerCoach(state: any, payload: formTypes) {
 		state.coaches.push(payload);
 	},
+	setCoaches(state: any, payload: any) {
+		state.coaches = payload;
+	},
 };
