@@ -1,11 +1,12 @@
 teleport(to="body")
     .backdrop(v-if="show" @click="tryClose")
-    dialog(open v-if="show")
-        header
-            slot(name="header")
-                h2 {{ title }}
-        section
-            slot
-        menu(v-if="!fixed")
-            slot(name="actions")
-                base-button(@click="tryClose") Close
+    transition(name='dialog')
+        dialog(open v-if="show")
+            header
+                slot(name="header")
+                    h2 {{ title }}
+            section
+                slot
+            menu(v-if="!fixed")
+                slot(name="actions")
+                    base-button(@click="tryClose") Close
