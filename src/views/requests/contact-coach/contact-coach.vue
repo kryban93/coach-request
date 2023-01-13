@@ -31,10 +31,18 @@ export default {
 		},
 		submitForm() {
 			this.formIsValid = true;
+			this.validateForm();
 
 			if (!this.formIsValid) {
 				return;
 			}
+			this.$store.dispatch("requests/contactCoach", {
+				email: this.email.value,
+				message: this.message.value,
+				coachId: this.$route.params.id,
+			});
+			console.log(this.$store.getters["requests/requests"]);
+			this.$router.replace("/coaches");
 		},
 	},
 };

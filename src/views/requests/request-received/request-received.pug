@@ -1,1 +1,7 @@
-p request received
+section
+    base-card
+        header
+            h2 Requests received
+        ul(v-if='hasRequests')
+            request-item(v-for='request in receivedRequests' :key='request.id' :email='request.userEmail' :message='request.message')
+        h3(v-else) You haven't received any request yet.
