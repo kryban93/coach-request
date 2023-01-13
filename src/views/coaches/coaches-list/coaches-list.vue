@@ -37,6 +37,7 @@ export default {
 				career: true,
 			},
 			isLoading: false,
+			error: null,
 		};
 	},
 	components: { CoachItem, CoachFilter },
@@ -46,8 +47,16 @@ export default {
 		},
 		async loadCoaches() {
 			this.isLoading = true;
-			await this.$store.dispatch("coaches/loadCoaches");
+			try {
+				await this.$store.dispatch("coaches/loadCoaches");
+			} catch (error: any) {
+				// TODO: update type any
+				this.error = error.message || "Something went wrong";
+			}
 			this.isLoading = false;
+		},
+		handleError() {
+			this.error = null;
 		},
 	},
 	created() {

@@ -1,3 +1,5 @@
+base-dialog(:show='!!error' title='An error occured!' @close='handleError')
+    p {{ error }}
 section
     coach-filter(@change-filter='setFilters')
 section
