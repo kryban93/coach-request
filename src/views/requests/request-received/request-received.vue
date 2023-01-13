@@ -9,6 +9,12 @@ export default {
 	components: {
 		RequestItem,
 	},
+	data() {
+		return {
+			isLoading: false,
+			error: null,
+		};
+	},
 	computed: {
 		receivedRequests() {
 			return this.$store.getters["requests/requests"];
@@ -16,6 +22,24 @@ export default {
 		hasRequests() {
 			return this.$store.getters["requests/hasRequests"];
 		},
+	},
+	methods: {
+		async loadRequests() {
+			this.isLoading = true;
+			try {
+				await this.$store.dispatch("requests/fetchRequests");
+			} catch (error: any) {
+				// TODO: error types
+				this.error = error || "Something failed";
+			}
+			this.isLoading = false;
+		},
+		handleError() {
+			this.error = null;
+		},
+	},
+	created() {
+		this.loadRequests();
 	},
 };
 </script>

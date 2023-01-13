@@ -1,7 +1,10 @@
+base-dialog(:show='!!error' title='An error occured!' @close='handleError')
+    p {{ error }}
 section
     base-card
         header
             h2 Requests received
-        ul(v-if='hasRequests')
+        base-spinner(v-if='isLoading')
+        ul(v-else-if='hasRequests && !isLoading')
             request-item(v-for='request in receivedRequests' :key='request.id' :email='request.userEmail' :message='request.message')
         h3(v-else) You haven't received any request yet.
