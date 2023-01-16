@@ -1,6 +1,13 @@
+import type { RequestsContext } from "./types";
 export default {
-	async contactCoach(context: any, payload: any) {
-		// TODO: update types
+	async contactCoach(
+		context: RequestsContext,
+		payload: {
+			coachId: string;
+			email: string;
+			message: string;
+		},
+	) {
 		const newRequest = {
 			id: null,
 			coachId: payload.coachId,
@@ -32,7 +39,7 @@ export default {
 		console.log(newRequest);
 		context.commit("addRequest", newRequest);
 	},
-	async fetchRequests(context: any) {
+	async fetchRequests(context: RequestsContext) {
 		const coachId = context.rootGetters.userId;
 
 		const response = await fetch(
