@@ -19,7 +19,7 @@ export default {
 
 		return coaches.some((coach: Coach) => coach.id === userId);
 	},
-	shouldUpdate(state: any) {
+	shouldUpdate(state: CoachStoreTypes): boolean {
 		const lastFetch = state.lastFetch;
 
 		if (!lastFetch) {
@@ -27,6 +27,6 @@ export default {
 		}
 
 		const currentTimeStamp = new Date().getTime();
-		return (currentTimeStamp - lastFetch) / 1000 > 60;
+		return (currentTimeStamp - +lastFetch) / 1000 > 60;
 	},
 };

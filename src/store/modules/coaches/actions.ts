@@ -1,6 +1,7 @@
+import type { CoachesContext } from "./types";
 import type { formTypes } from "./../../../components/coaches/coach-form/types";
 export default {
-	async registerCoach(context: any, data: formTypes) {
+	async registerCoach(context: CoachesContext, data: formTypes) {
 		const userId = context.rootGetters.userId;
 		const coachData = {
 			firstName: data.first,
@@ -17,15 +18,19 @@ export default {
 				body: JSON.stringify(coachData),
 			},
 		);
-		// const responseData = await response.json();
+		const responseData = await response.json();
 
 		if (!response.ok) {
-			// TODO: error handling
+			const error = new Error(responseData.message || "failed to register coach");
+			throw error;
 		}
 
 		context.commit("registerCoach", { id: userId, ...coachData });
 	},
-	async loadCoaches(context: any, payload: any) {
+	async loadCoaches(
+		context: CoachesContext,
+		payload: { forceRefresh: boolean },
+	) {
 		if (!payload.forceRefresh && !context.getters.shouldUpdate) {
 			return;
 		}
