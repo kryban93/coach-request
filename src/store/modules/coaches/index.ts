@@ -1,4 +1,4 @@
-import type { Coach, CoachStoreTypes } from "./types";
+import type { CoachStoreTypes } from "./types";
 import mutations from "./mutations";
 import getters from "./getters";
 import actions from "./actions";
